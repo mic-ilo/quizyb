@@ -1,0 +1,242 @@
+.builderdash-container {
+  background-color: #f8b528;
+  width: 100%;
+  height: 100vh;
+}
+
+.builder-dashboard {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+  background-color: #f8b528;
+  align-items: center;
+  position: relative;
+  overflow: visible;
+}
+
+/* NAV ICONS */
+
+/* User Profile Icon */
+.user-profile-icon-buildash img {
+  position: absolute;
+  top: 5px;
+  right: 120px;
+  width: 90px;
+  height: 90px;
+  cursor: pointer;
+  transition: transform 0.3s;
+  z-index: 5;
+}
+
+.user-profile-icon-buildash img:hover {
+  transform: scale(1.01) translateY(-5px);
+}
+
+/* Log Out Icon */
+.logout-icon-buildash img {
+  position: absolute;
+  top: 15px;
+  right: 60px;
+  width: 55px;
+  height: 55px;
+  cursor: pointer;
+  transition: transform 0.3s;
+  z-index: 3;
+}
+
+.logout-icon-buildash img:hover {
+  transform: scale(1.01) translateY(-5px);
+}
+
+/* LOGO */
+
+.logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 8%;
+  margin-top: 15px;
+  margin-left: 15px;
+  z-index: 101;
+}
+
+/* Section 1: Header */
+.header-section {
+  text-align: center;
+  margin: 40px auto;
+  letter-spacing: 1px;
+}
+
+.header-section h1 {
+  margin: 0;
+  font-size: 40px;
+  line-height: 1.4;
+}
+
+.header-section h2 {
+  margin: 0;
+  font-size: 32px;
+  line-height: 1.5;
+}
+
+/* Section 2: Create Quiz Button */
+.create-quiz-section {
+  position: relative;
+  align-self: center;
+
+  margin-bottom: 35px;
+}
+
+.create-quiz-button {
+  font-size: 20px;
+  padding: 20px 40px;
+  background-color: #00fa95;
+  color: #260f08;
+  font-weight: bold;
+  border-radius: 15px;
+
+  transition: background-color 0.3s, color 0.3s;
+  border: 5px #260f08 solid;
+  box-shadow: 4px 6px 0px 0px rgba(0, 0, 0, 1.5);
+
+  &:hover {
+    transform: scale(1.01) translateY(-5px);
+    cursor: pointer;
+  }
+}
+
+/* Section 3: Quiz List Table */
+.quiz-list-section {
+  margin-top: 20px;
+  width: 90%;
+  align-self: center;
+}
+
+.quiz-list {
+  width: 100%;
+  border-collapse: collapse;
+  border: 5px #260f08 solid;
+  /* border-radius: 15px; */
+}
+
+.quiz-list th {
+  background-color: #260f08;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: 600;
+  border: 5px #260f08 solid;
+}
+
+.quiz-list th:last-child {
+  content: "More";
+  background-color: #fa85ee;
+  color: #260f08;
+}
+
+.quiz-list th,
+.quiz-list td {
+  padding: 15px;
+  text-align: center;
+  border: 5px solid #260f08;
+}
+
+.quiz-list td {
+  background-color: white;
+  color: #260f08;
+}
+
+/* FOR VIEW MORE BUTTON SANA */
+.quiz-list td button {
+  font-weight: bold;
+  background-color: #fa85ee;
+  color: #260f08;
+  border: 3px #260f08 solid;
+  box-shadow: 4px 6px 0px 0px rgba(0, 0, 0, 1.5);
+
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.quiz-list td button:hover {
+  background-color: #191007;
+  color: white;
+}
+
+/* Pop-up modal styles */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: #fff;
+  max-height: 90vh;
+  width: 90vw;
+  max-width: 600px;
+  padding: 20px auto;
+  border-radius: 15px;
+  border: 5px solid #191007;
+  text-align: left;
+  box-shadow: 4px 8px 0px 0px rgba(0, 0, 0, 1.5);
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+
+.modal-content .modal-header {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.modal-content .modal-text {
+  font-size: 18px;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.modal-content .modal-text ul {
+  list-style: none;
+  padding: 0;
+}
+
+.modal-content .modal-text ul li {
+  margin-bottom: 10px;
+}
+
+.modal-content .player-scores {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-content .close-button {
+  font-size: 20px;
+  font-weight: bolder;
+  padding: 10px 20px;
+  background-color: #f8b528;
+  color: #260f08;
+  border-radius: 10px;
+  border: #260f08 3px solid;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 20px;
+  &:hover {
+    transform: scale(1.01) translateY(-5px);
+  }
+}

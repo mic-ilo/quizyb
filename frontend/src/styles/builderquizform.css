@@ -1,0 +1,348 @@
+/* MAIN CONTAINERS */
+.builderquizform-container {
+  height: 100vh;
+  background-color: #f8b528;
+  top: 20px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 7fr;
+  gap: 10px;
+  background-color: #f8b528;
+  /* position: relative; */
+  z-index: 101;
+}
+
+/* .quiz-template {
+  top: 10px;
+} */
+
+/* SIDEBAR STYLE */
+.sidebar {
+  position: sticky;
+  left: 20px;
+  width: 14vw;
+  height: 90vh;
+  margin-top: 15px;
+  margin-right: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #fff0e1;
+  border-radius: 15px;
+  border: 5px #260f08 solid;
+  box-shadow: 4px 6px 0px 0px rgba(0, 0, 0, 1.5);
+}
+
+.sidebar-logo {
+  width: 70%; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 25px;
+}
+
+.sidebar-logo img {
+  width: 100%; 
+  max-width: 100%; 
+}
+
+
+.sidebar-heading {
+  text-align: center;
+  font-size: 20px;
+  font-weight: 600;
+  color: #260f08;
+  margin-bottom: 10px;
+}
+
+.sidebar-paragraph {
+  font-size: 14px;
+  color: #260f08;
+  margin-bottom: 15px;
+  line-height: 19px;
+}
+
+.back-to-dashboard {
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+  width: 150px;
+  height: 35px;
+
+  cursor: pointer;
+  background-color: #ffde59;
+  color: #260f08;
+  border-radius: 10px;
+  border: 2px solid #260f08;
+  box-shadow: 2px 4px 0px 0px rgba(0, 0, 0, 1.5);
+
+  &:hover {
+    background-color: white;
+    color: #260f08;
+    transform: scale(1.01) translateY(-5px);
+  }
+}
+
+/* QUIZ TITLE */
+
+.quiz-title-field {
+  text-align: center;
+  margin-bottom: 5px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.quiz-title-field input {
+  width: 500px;
+  padding: 10px;
+  margin: 5px auto;
+
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  border: 3px #260f08 solid;
+  box-shadow: 3px 5px 0px 0px rgba(0, 0, 0, 1.5);
+}
+
+.new-quiz-title {
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 5px;
+  font-size: 30px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+/* QuizForm Styles */
+
+.add-card {
+  margin-left: 40px;
+}
+
+
+.quiz-form {
+  display: grid;
+  grid-gap: 4px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  padding: 5px;
+  margin-right: 70px;
+  align-content: center;
+
+}
+
+.form-group input {
+  border: 3px #260F08 solid;
+  box-shadow: 2px 4px 0px 0px rgba(38, 15, 8, 1);
+}
+
+
+.form-group-quiz input {
+  border: 2px #260f08 solid;
+  box-shadow: 2px 4px 0px 0px rgba(0, 0, 0, 1.5);
+  border-radius: 5px;
+  padding: 5px 30px;
+  margin: 10px 0;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.form-group-quiz label {
+font-weight: bold ;
+}
+.form-group-quiz {
+  margin-bottom: 12px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  margin: 15px;
+  border-radius: 10px;
+  padding: 20px;
+  position: relative;
+  border: 3px #260f08 solid;
+  box-shadow: 4px 6px 0px 0px rgba(0, 0, 0, 1.5);
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.card-icons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 5px;
+  position: absolute;
+  bottom: 5px;
+  right: 10px;
+}
+
+.edit-icon,
+.delete-icon {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+/* AddQuestion Styles */
+
+.add-icon {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  width: 70px;
+  cursor: pointer;
+}
+
+.add-button {
+  align-items: center;
+  font-size: 20px;
+  font-weight: 600;
+  background-color: #00fa95;
+  color: #260f08;
+  padding: 10px;
+  border-radius: 15px;
+  margin: auto 30px;
+  cursor: pointer;
+  border: 5px #260f08 solid;
+  box-shadow: 4px 6px 0px 0px rgba(0, 0, 0, 1.5);
+  &:hover {
+    background-color: #260f08;
+    color: white;
+  }
+}
+
+.card-entry {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 80%;
+  margin-top: 30px;
+}
+
+.card-entry p {
+  padding: 0%;
+  margin: 0;
+}
+
+/* FORM BUTTONS */
+
+.finish-quiz-button {
+  font-size: 18px;
+  font-weight: bold;
+  position: absolute;
+  text-align: center;
+  top: 100px;
+  right: 20px;
+  width: 70px;
+  height: 70px;
+  /* padding: 30px 20px; */
+  cursor: pointer;
+  background-color: #fa85ee;
+  color: #260f08;
+  border-radius: 15px;
+  border: 5px solid #260f08;
+  box-shadow: 3px 5px 0px 0px rgba(0, 0, 0, 1.5);
+
+  &:hover {
+    background-color: #ffde59;
+    color: #260f08;
+    transform: scale(1.01) translateY(-5px);
+  }
+}
+
+/* Modal Styles */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: #fff0e1;
+  padding: 40px;
+  border-radius: 10px;
+  text-align: center;
+  border: 5px #260f08 solid;
+}
+
+.modal-header-quizform {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.modal-text-quizform {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: center;
+}
+
+.modal-buttons button {
+  font-size: 16px;
+  font-weight: 600;
+  padding: 10px 20px;
+  margin: 20px 10px 5px 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  color: #260f08;
+  border: 3px #260f08 solid;
+  box-shadow: 4px 6px 0px 0px rgba(38, 15, 8, 1);
+  &:hover {
+    transform: scale(1.01) translateY(-5px);
+  }
+}
+
+.modal-buttons button.primary {
+  background-color: #00fa95;
+}
+
+.modal-buttons button.secondary {
+  background-color: #fa85ee;
+  color: #260f08;
+  margin-left: 20px;
+}
+
+/* Quiz Code Styles */
+.quiz-code {
+  font-size: 32px;
+  font-weight: 500;
+  margin-top: 20px;
+  text-align: center;
+  color: #f8b528;
+}
+
+.button-container {
+  text-align: center;
+  justify-content: center;
+}
+
+.button-container button {
+  background-color: #f8b528;
+  font-size: 18px;
+  padding: 20px 20px;
+  margin: 0 auto;
+  border-radius: 10px;
+  cursor: pointer;
+  color: #260f08;
+  border: 5px #260f08 solid;
+  box-shadow: 4px 6px 0px 0px rgba(38, 15, 8, 1);
+  &:hover {
+    transform: scale(1.01) translateY(-5px);
+  }
+}

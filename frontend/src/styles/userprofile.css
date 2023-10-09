@@ -1,0 +1,273 @@
+/* main */
+
+.userprofilepage-container {
+  background-color: #f8b528;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.user-profile-container {
+  width: 320px;
+  background-color: white;
+  border-radius: 15px;
+  border: 5px solid #260f08;
+  box-shadow: 4px 8px 0px 0px rgba(0, 0, 0, 1.5);
+  padding: 40px 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  z-index: 3;
+}
+
+.logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 8%;
+  margin-top: 5px;
+  margin-left: 15px;
+  z-index: 5;
+}
+
+.realname-section {
+  display: flex;
+  align-items: center;
+  background-color: #ffcd00;
+  border-radius: 10px;
+  padding: 5px 10px;
+  width: 90%;
+  margin-bottom: 15px;
+  border: 3px solid #260f08;
+  box-shadow: 3px 6px 0px 0px rgba(0, 0, 0, 1.5);
+}
+
+.name-section {
+  display: flex;
+  flex-direction: row;
+  padding: 5px;
+  flex: 1;
+}
+
+.name-label {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.name-value {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  font-size: 1.1rem;
+}
+
+.username-section-profile,
+.role-section-profile {
+  background-color: #fff0e1;
+  border-radius: 10px;
+  border: 3px dashed #260f08;
+  padding: 5px;
+
+  color: #260f08;
+  width: 90%;
+  margin: 5px;
+  font-size: 1rem;
+  text-align: center;
+  padding-left: 12px;
+}
+
+.action-section {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  width: 90%;
+  margin: 10px auto;
+}
+
+.update-password-btn,
+.delete-account-btn {
+  flex: 1;
+  font-weight: bold;
+  color: #260f08;
+  border: 3px solid #260f08;
+  box-shadow: 3px 6px 0px 0px rgba(0, 0, 0, 1.5);
+  border-radius: 10px;
+  padding: 15px 7px;
+  cursor: pointer;
+  z-index: 4;
+}
+
+.update-password-btn:hover,
+.delete-account-btn:hover {
+  background-color: #260f08;
+  color: white;
+  transform: scale(1.01) translateY(-5px);
+  cursor: pointer;
+  /* padding: 20px 10px; */
+}
+
+.update-password-btn {
+  background-color: #00fa95;
+}
+
+.delete-account-btn {
+  background-color: #fa85ee;
+  color: #260f08;
+}
+
+/* Pop-up styles */
+.popup-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 100;
+}
+
+.popup {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+  color: black;
+  width: 80%; /* Adjust the width as needed */
+  max-width: 400px;
+  z-index: 1000;
+}
+
+.popup h3 {
+  margin-bottom: 20px;
+}
+
+.popup form,
+.popup .button-container,
+.popup p {
+  margin-top: 20px;
+}
+
+.popup label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.popup input[type="password"] {
+  width: calc(100% - 20px);
+  padding: 10px;
+  border: 3px #260f08 solid;
+  border-radius: 10px;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.popup button {
+  width: calc(40% - 10px);
+  color: #260f08;
+  font-weight: bold;
+  border: 3px #260f08 solid;
+  box-shadow: 4px 6px 0px 0px rgba(38, 15, 8, 1);
+  border-radius: 10px;
+  padding: 7px;
+  font-size: 16px;
+  gap: 10px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.popup .change-pw-btn {
+  background-color: #00fa95;
+  margin-right: 25px;
+}
+
+.popup .return-btn {
+  background-color: #f8b528;
+}
+
+.popup .delete-yes,
+.popup .delete-no {
+  width: calc(40% - 10px);
+  background-color: #00fa95;
+}
+
+.popup .delete-no {
+  background-color: #f8b528;
+  margin-left: 25px;
+}
+
+.popup button:hover {
+  background-color: #260f08;
+  color: white;
+  transform: scale(1.01) translateY(-5px);
+  cursor: pointer;
+}
+
+.popup p {
+  color: #260f08;
+
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+
+.popup-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #fa85ee;
+}
+
+/* ERROR & SUCCES STYLES */
+.error-message {
+  color: #ff0000;
+  font-size: 14px;
+  margin-top: 5px;
+  margin-bottom: 20px;
+}
+
+.success-message {
+  color: #008000;
+  margin-top: 5px;
+  margin-bottom: 20px;
+}
+
+/* Icons */
+
+.back-icon-userprofile img {
+  position: fixed;
+  top: 5px;
+  right: 380px;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  transition: transform 0.3s;
+  z-index: 4;
+  &:hover {
+    transform: scale(1.01) translateY(-5px);
+  }
+}
+
+.bee-icon {
+  position: absolute;
+  bottom: 0;
+  left: 270px;
+  z-index: 2;
+}
+
+.bee-icon img {
+  width: 20%;
+  height: 20%;
+}

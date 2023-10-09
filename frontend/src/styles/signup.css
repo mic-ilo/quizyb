@@ -1,0 +1,232 @@
+.signuppage-container {
+  background-color: #fff0e1;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* position: relative; */
+  overflow: visible;
+}
+
+.signuppage-container-box {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0;
+  width: 80vw;
+  height: 85vh;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  border: 5px #260f08 solid;
+  box-shadow: 4px 6px 0px 0px rgba(38, 15, 8, 1);
+  overflow: hidden;
+  z-index: 2;
+}
+
+.logo-signup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 8%;
+  margin-top: 15px;
+  margin-left: 15px;
+  z-index: 101;
+}
+
+/* LEFT SECTION: The Description Part */
+.description-section {
+  padding-left: 35px;
+  background-color: #f8b528;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.description-section h2 {
+  color: #260f08;
+  font-size: 30px;
+  margin-bottom: 35px;
+}
+
+.role-section-signup {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  width: 95%;
+  padding-right: 10px;
+}
+
+.role-image-signup img {
+  max-width: 100px;
+  height: auto;
+  margin-right: 20px;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.role-description-signup {
+  flex: 1;
+  padding-right: 10px;
+}
+
+.role-section-signup h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #260f08;
+}
+
+.role-description-signup p {
+  font-size: 15px;
+  color: #260f08;
+  line-height: 1.5;
+  margin-bottom: 0;
+  padding-right: 30px;
+}
+
+/* RIGHT SECTION: The Signup Form */
+.signup-section {
+  padding: 5px 30px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #260f08;
+  /* border: 3px solid red; */
+  overflow: hidden;
+  width: 100%;
+  min-height: 100%;
+  box-sizing: border-box;
+}
+
+.signup-section h2 {
+  color: #260f08;
+  margin-bottom: 20px;
+}
+
+/* ROLE BUTTONS */
+.role-buttons-signup {
+  display: flex;
+  justify-content:center;
+  align-self: center;
+  margin-bottom: 30px;
+  width: calc(100% - 50px);
+}
+
+.builder-button,
+.player-button {
+  flex: 1;
+  background-color: #fff0e1;
+  color: #260f08;
+  border: 3px solid #260f08;
+  box-shadow: 4px 6px 0px 0px rgba(38, 15, 8, 1);
+  border-radius: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-right: 30px;
+  font-size: 14px;
+}
+
+.builder-button:hover,
+.player-button:hover {
+  transform: scale(1.01) translateY(-5px);
+}
+
+.builder-button.selected,
+.player-button.selected {
+  background-color: #fa85ee;
+}
+
+/* FORM SUB-SECTION */
+.form-group-signup {
+  margin-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+}
+
+.form-group-signup .columns {
+  flex-basis: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-group-signup .column {
+  flex-basis: calc(50% - 15px);
+}
+
+.form-group-signup label {
+  font-weight: bold;
+  display: block;
+}
+
+.form-group-signup input {
+  border-radius: 5px;
+  border: 2px #260f08 solid;
+  box-shadow: 2px 4px 0px 0px rgba(38, 15, 8, 1);
+  font-size: 14px;
+  padding: 8px;
+  width: 100%;
+}
+
+.form-group-signup .column input[type="text"],
+.form-group-signup .column input[type="password"] {
+  width: calc(100% - 10px);
+}
+
+/* BUTTON CONTAINER */
+.button-container-signup {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+
+.button-container-signup button {
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #00fa95;
+  color: #260f08;
+  border-radius: 10px;
+  padding: 12px 35px;
+  cursor: pointer;
+  margin-right: 30px;
+  border: 3px solid #260f08;
+  box-shadow: 4px 6px 0px 0px rgba(38, 15, 8, 1);
+}
+
+.button-container-signup button:hover {
+  transform: scale(1.01) translateY(-5px);
+}
+
+.button-container-signup a {
+  margin: 10px auto;
+  font-size: 16px;
+  text-align: center;
+  font-weight: 600;
+  color: #260f08;
+  text-decoration: underline;
+  cursor: pointer;
+  justify-content: center;
+}
+
+.error-message-signup {
+  color: red;
+  margin-top: 10px;
+  font-size: 14px;
+}
+.success-message-signup {
+  color: green;
+  margin-top: 10px;
+  font-size: 14px;
+}

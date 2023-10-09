@@ -1,0 +1,26 @@
+:root {
+  font-family: "Fredoka", sans-serif;
+  font-size: 16px;
+
+  font-weight: 400;
+  color-scheme: light dark;
+  color: #260f08;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  scroll-behavior: smooth;
+  list-style: none;
+
+
+}
+
