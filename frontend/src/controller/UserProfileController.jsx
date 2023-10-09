@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import UserProfile from "../view/Userprofile.view";
 import jwtDecode from "jwt-decode";
-import Usermodel from "../model/providers/UserModel";
+import Usermodel from "../model/UserModel";
 import { useNavigate } from "react-router-dom";
 
 export default function UserProfilecontroller() {
