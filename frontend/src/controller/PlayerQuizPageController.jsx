@@ -1,4 +1,4 @@
-import PlayerQuizPage from "../view/PlayerquizPage.jsx";
+import PlayerQuizPage from "../view/Playerquizpage.jsx";
 import { useEffect, useState } from "react";
 import jwtDecode from "jwt-decode";
 import { useLocation } from "react-router-dom";
