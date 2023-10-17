@@ -5,20 +5,23 @@ class UserModel {
 
   async addUser(user) {
     try {
-      const response = await fetch("http://localhost:3000/user/register", {
-        method: "POST", // *GET, POST, PUT, DELETE, etc.
-        mode: "cors", // no-cors, *cors, same-origin
-        cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
-        credentials: "same-origin", // include, *same-origin, omit
-        headers: {
-          "Content-Type": "application/json",
-          // "Authorization": localStorage.getItem("token"),
-          // 'Content-Type': 'application/x-www-form-urlencoded',
-        },
-        redirect: "follow", // manual, *follow, error
-        referrerPolicy: "no-referrer", // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
-        body: JSON.stringify(user), // body data type must match "Content-Type" header
-      });
+      const response = await fetch(
+        "https://quizyb.onrender.com/user/register",
+        {
+          method: "POST", // *GET, POST, PUT, DELETE, etc.
+          mode: "cors", // no-cors, *cors, same-origin
+          cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
+          credentials: "same-origin", // include, *same-origin, omit
+          headers: {
+            "Content-Type": "application/json",
+            // "Authorization": localStorage.getItem("token"),
+            // 'Content-Type': 'application/x-www-form-urlencoded',
+          },
+          redirect: "follow", // manual, *follow, error
+          referrerPolicy: "no-referrer", // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
+          body: JSON.stringify(user), // body data type must match "Content-Type" header
+        }
+      );
 
       if (response.status === 401) {
         localStorage.removeItem("token");
@@ -43,7 +46,7 @@ class UserModel {
         username: username,
         password: password,
       };
-      const response = await fetch("http://localhost:3000/auth/login", {
+      const response = await fetch("https://quizyb.onrender.com/auth/login", {
         method: "POST", // *GET, POST, PUT, DELETE, etc.
         mode: "cors", // no-cors, *cors, same-origin
         cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
@@ -75,7 +78,7 @@ class UserModel {
       };
 
       const response = await fetch(
-        `http://localhost:3000/user/update-password/${userId}`,
+        `https://quizyb.onrender.com/user/update-password/${userId}`,
         {
           method: "PUT", // *GET, POST, PUT, DELETE, etc.
           mode: "cors", // no-cors, *cors, same-origin
@@ -109,7 +112,7 @@ class UserModel {
       };
 
       const response = await fetch(
-        `http://localhost:3000/user/deactivate/${userId}`,
+        `https://quizyb.onrender.com/user/deactivate/${userId}`,
         {
           method: "PUT", // *GET, POST, PUT, DELETE, etc.
           mode: "cors", // no-cors, *cors, same-origin

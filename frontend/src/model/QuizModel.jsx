@@ -1,7 +1,7 @@
 class QuizModel {
   async createQuiz(quiz, UserId) {
     try {
-      const response = await fetch(`http://localhost:3000/quiz/${UserId}`, {
+      const response = await fetch(`https://quizyb.onrender.com/quiz/${UserId}`, {
         method: "POST", // *GET, POST, PUT, DELETE, etc.
         mode: "cors", // no-cors, *cors, same-origin
         cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
@@ -31,7 +31,7 @@ class QuizModel {
   }
   async getQuizzes(UserId) {
     try {
-      const response = await fetch(`http://localhost:3000/result/${UserId}/quizzes`, {
+      const response = await fetch(`https://quizyb.onrender.com/result/${UserId}/quizzes`, {
         method: "GET", // *GET, POST, PUT, DELETE, etc.
         mode: "cors", // no-cors, *cors, same-origin
         cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
@@ -61,7 +61,7 @@ class QuizModel {
 
   async getQuiz (quizId) {
     try {
-      const response = await fetch(`http://localhost:3000/answer/${quizId}`, {
+      const response = await fetch(`https://quizyb.onrender.com/answer/${quizId}`, {
         method: "GET", // *GET, POST, PUT, DELETE, etc.
         mode: "cors", // no-cors, *cors, same-origin
         // cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
@@ -85,7 +85,7 @@ class QuizModel {
     //post quiz result
     async postQuizResult (quizId, quizResult) {
       try {
-        const response = await fetch(`http://localhost:3000/answer/${quizId}`, {
+        const response = await fetch(`https://quizyb.onrender.com/answer/${quizId}`, {
           method: "POST", // *GET, POST, PUT, DELETE, etc.
           mode: "cors", // no-cors, *cors, same-origin
           // cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
@@ -109,7 +109,7 @@ class QuizModel {
   }
   async getResultByQuiz(quizId) {
     try {
-      const response = await fetch(`http://localhost:3000/result/${quizId}/players`, {
+      const response = await fetch(`https://quizyb.onrender.com/result/${quizId}/players`, {
         method: "GET", // *GET, POST, PUT, DELETE, etc.
         mode: "cors", // no-cors, *cors, same-origin
         cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
