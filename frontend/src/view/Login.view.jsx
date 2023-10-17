@@ -2,6 +2,7 @@ import React from "react";
 import styles from "../styles/login.css";
 import Bee from "../assets/bee-cut.png";
 import Logo from "../assets/logo.png";
+import LoadingBee from "../components/loading/Loading"
 
 const LoginView = (props) => {
   const {
@@ -13,10 +14,12 @@ const LoginView = (props) => {
     loginError,
     loginSuccess,
     signup,
+    loading
   } = props;
 
   return (
     <div className="loginpage-container">
+      {loading && <LoadingBee/>}
       <img className="logo" src={Logo} alt="QuizyB logo" />
       <div className="login-container">
         {/* Left Section with Brand Image */}

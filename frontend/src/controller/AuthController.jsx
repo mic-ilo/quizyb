@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { useState, useContext, useEffect } from "react";
 import { AuthContext } from "../model/providers/authprovider";
-import UserModel from "../model/UserModel";
+import UserModel from "../model/providers/UserModel";
 import jwtDecode from "jwt-decode";
 
 //view
@@ -21,7 +21,7 @@ export default function AuthController() {
   const [loginLoading, setLoginLoading] = useState(false); //pass this as value to disabled button in view
   const [loginError, setLoginError] = useState(false); //if login error true, use this for message
   const [emptyDataError, setEmptyDataError] = useState(false); //if user data is empty, set true
-
+  const [loading, setLoading] = useState(false);
   //listen to changes in inputs of username and password
   const handleChange = (event) => {
     switch (event.target.id) {
@@ -56,19 +56,24 @@ export default function AuthController() {
       const decodedToken = await jwtDecode(token);
 
       const role = await decodedToken.role;
+      setLoading(true);
 
       if (role === "player") {
         setTimeout(() => {
           navigate("/player/dashboard");
+          setLoading(false);
         }, 1000);
       } else if (role === "builder") {
         setTimeout(() => {
           navigate("/builder/dashboard");
+          setLoading(false);
         }, 1000);
       }
     } catch (err) {
+      setLoading(false);
       setLoginError(true);
     } finally {
+      setLoading(false);
       setLoginLoading(false);
     }
   };
@@ -102,6 +107,7 @@ export default function AuthController() {
         emptyDataError={emptyDataError}
         loginLoading={loginLoading}
         signup={signup}
+        loading={loading}
       />
     </div>
   );

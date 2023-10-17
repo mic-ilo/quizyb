@@ -102,7 +102,7 @@ const BuilderQuizForm = (props) => {
             <div className="modal"> 
               <div className="modal-content">
                 <div className="modal-header-quizform">
-                  <h2> 🎉 Buzztastic! <br/> Your quiz is now ready. </h2>
+                  <h2>Buzztastic! 🎉 <br/> Your quiz is now ready. </h2>
                 </div>
                 <div className="modal-text-quizform">
                   Copy your code, share to your player bees, <br/> and let the quizzing begin!
