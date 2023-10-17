@@ -3,6 +3,7 @@ import styles from "../styles/UserProfile.css";
 import BackIcon from '../assets/back.png';
 import BeeCut from '../assets/bee-cut.png';
 import Logo from "../assets/logo.png";
+import Loading from "../components/loading/Loading";
 
 function UserProfile(props) {
   const {
@@ -22,11 +23,13 @@ function UserProfile(props) {
     toggleDeleteAccountPopup,
     handleAccountDeletion,
     backtoDashboard,
-    accountDeletion
+    accountDeletion,
+    loading
   } = props;
 
   return (
     <div className = "userprofilepage-container">
+      {loading && <Loading message="Account changes in progress"/> }
       <img className="logo" src={Logo} alt="QuizyB logo" />
       <div className="user-profile-container">
 

@@ -6,6 +6,10 @@ import { useNavigate } from "react-router-dom";
 
 export default function UserProfilecontroller() {
   const navigate = useNavigate();
+
+  //loading
+  const [loading, setLoading] = useState(false);
+
   //Password states
   const [passwordError, setPasswordError] = useState(false);
   const [passwordUpdateSuccess, setPasswordUpdateSuccess] = useState(false);
@@ -95,12 +99,16 @@ export default function UserProfilecontroller() {
       // Successful password update
       setPasswordError(false);
       setPasswordUpdateSuccess(true);
+      setLoading(true)
 
       setTimeout(() => {
         localStorage.removeItem("token");
         navigate("/login");
+        setLoading(false);
       }, 5000);
+      
     } catch (error) {
+      setLoading(false);
       const errorMessage = new Error("Error updating password");
       throw errorMessage;
     }
@@ -114,10 +122,11 @@ export default function UserProfilecontroller() {
       setAccountDeletion(true);
       const deleteAccount = await Usermodel.deleteUser(decodedToken._id);
       setAccountDeletion(true);
-
+      setLoading(true);
       setTimeout(() => {
         localStorage.removeItem("token");
         navigate("/");
+        setLoading(false);
       }, 5000);
     } catch (error) {
       const errorMessage = new Error("Error deleting account");
@@ -145,6 +154,7 @@ export default function UserProfilecontroller() {
         handleAccountDeletion={handleAccountDeletion}
         backtoDashboard={backtoDashboard}
         accountDeletion={accountDeletion}
+        loading={loading} 
       />
     </>
   );

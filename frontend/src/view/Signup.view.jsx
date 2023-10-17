@@ -4,6 +4,7 @@ import styles from "../styles/signup.css";
 import Builder from "../assets/builder.png";
 import Player from "../assets/player.png";
 import Logo from "../assets/logo.png";
+import LoadingBee from "../components/loading/Loading";
 
 const SignupView = (props) => {
   const {
@@ -19,6 +20,7 @@ const SignupView = (props) => {
     missingInfoError,
     usernameError,
     passwordError,
+    loading,
   } = props;
 
   // State for ROLE SELECTION
@@ -37,6 +39,9 @@ const SignupView = (props) => {
 
   return (
     <div className="signuppage-container">
+      {loading && (
+        <LoadingBee message="Account successfully created! Please login with your new account credentials" />
+      )}
       <img className="logo-signup" src={Logo} alt="QuizyB logo" />
       <div className="signuppage-container-box">
         {/* Description Section (Left Half) */}

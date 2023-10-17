@@ -16,7 +16,7 @@ export default function UserController() {
   });
 
   const navigate = useNavigate();
-
+  const [loading, setLoading] = useState(false);
   const [registrationSuccess, setRegistrationSuccess] = useState(false);
   const [confirmPassword, setConfirmPassword] = useState("");
   const [passwordError, setPasswordError] = useState(false);
@@ -92,7 +92,13 @@ export default function UserController() {
       setPasswordError(false);
       setUsernameError(false);
       setConfirmPassword("");
+      setLoading(true);
+      setTimeout(() => {
+        navigate("/login");
+        setLoading(false);
+      }, 3000);
     } catch (error) {
+      setLoading(false);
       console.error("An error occurred:", error);
       setUsernameError(true);
     }
@@ -116,6 +122,7 @@ export default function UserController() {
         login={loginNavigate}
         missingInfoError={missingInfoError}
         usernameError={usernameError}
+        loading={loading}
       />
     </div>
   );
