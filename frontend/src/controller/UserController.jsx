@@ -1,5 +1,5 @@
 import { useState } from "react";
-import UserModel from "../model/Usermodel";
+import UserModel from "../model/UserModel";
 import { useNavigate } from "react-router-dom";
 //view
 import SignupView from "../view/Signup.view";
