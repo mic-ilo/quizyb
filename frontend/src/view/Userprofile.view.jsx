@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import styles from "../styles/UserProfile.css";
-import BackIcon from '../assets/back.png';
-import BeeCut from '../assets/bee-cut.png';
+import styles from "../styles/userprofile.css";
+import BackIcon from "../assets/back.png";
+import BeeCut from "../assets/bee-cut.png";
 import Logo from "../assets/logo.png";
 import Loading from "../components/loading/Loading";
 
@@ -24,29 +24,24 @@ function UserProfile(props) {
     handleAccountDeletion,
     backtoDashboard,
     accountDeletion,
-    loading
+    loading,
   } = props;
 
   return (
-    <div className = "userprofilepage-container">
-      {loading && <Loading message="Account changes in progress"/> }
+    <div className="userprofilepage-container">
+      {loading && <Loading message="Account changes in progress" />}
       <img className="logo" src={Logo} alt="QuizyB logo" />
       <div className="user-profile-container">
-
         {/* Icons */}
         <div className="icons">
-     
-          <div className="back-icon-userprofile"> 
-              <img src={BackIcon} alt="Back Icon" onClick={backtoDashboard}/>
+          <div className="back-icon-userprofile">
+            <img src={BackIcon} alt="Back Icon" onClick={backtoDashboard} />
           </div>
-                      
+
           <div className="bee-icon">
-            <img src={BeeCut} alt="Bee"/>
+            <img src={BeeCut} alt="Bee" />
           </div>
-
         </div>
-
-
 
         {/* Real Name Section */}
         <div className="realname-section">
@@ -90,8 +85,6 @@ function UserProfile(props) {
           </button>
         </div>
 
-        
-
         {/* Password Update Popup */}
         {showUpdatePasswordPopup && (
           <div className="popup-container">
@@ -123,7 +116,8 @@ function UserProfile(props) {
                 )}
                 {passwordUpdateSuccess && (
                   <div className="success-message">
-                    Bee-come secure! Your password is being updated. Please login again.
+                    Bee-come secure! Your password is being updated. Please
+                    login again.
                   </div>
                 )}
                 <button
@@ -150,14 +144,20 @@ function UserProfile(props) {
             <div className="popup delete-account">
               <h3>Are you sure you want to leave the hive?</h3>
               {accountDeletion && (
-                <p>Farewell! Your account is being deleted. <br/>  Take care and bee happy!</p>
+                <p>
+                  Farewell! Your account is being deleted. <br /> Take care and
+                  bee happy!
+                </p>
               )}
               <div className="button-container">
                 <button className="delete-yes" onClick={handleAccountDeletion}>
-                  Yes, I do. <br/> Let me bee free
+                  Yes, I do. <br /> Let me bee free
                 </button>
-                <button className="delete-no" onClick={toggleDeleteAccountPopup}>
-                  No way! <br/> Take me back
+                <button
+                  className="delete-no"
+                  onClick={toggleDeleteAccountPopup}
+                >
+                  No way! <br /> Take me back
                 </button>
               </div>
             </div>

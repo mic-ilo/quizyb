@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../styles/PlayerDashboard.css";
+import "../styles/playerdashboard.css";
 import UserIcon from "../assets/user-settings.png";
 import LogoutIcon from "../assets/log-out.png";
 import Logo from "../assets/logo.png";
