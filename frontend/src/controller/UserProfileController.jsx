@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import UserProfile from "../view/Userprofile.view";
 import jwtDecode from "jwt-decode";
-import Usermodel from "../model/providers/UserModel";
+import Usermodel from "../model/UserModel";
 import { useNavigate } from "react-router-dom";
 
 export default function UserProfilecontroller() {
@@ -99,14 +99,13 @@ export default function UserProfilecontroller() {
       // Successful password update
       setPasswordError(false);
       setPasswordUpdateSuccess(true);
-      setLoading(true)
+      setLoading(true);
 
       setTimeout(() => {
         localStorage.removeItem("token");
         navigate("/login");
         setLoading(false);
       }, 5000);
-      
     } catch (error) {
       setLoading(false);
       const errorMessage = new Error("Error updating password");
@@ -154,7 +153,7 @@ export default function UserProfilecontroller() {
         handleAccountDeletion={handleAccountDeletion}
         backtoDashboard={backtoDashboard}
         accountDeletion={accountDeletion}
-        loading={loading} 
+        loading={loading}
       />
     </>
   );

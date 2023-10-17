@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { useState, useContext, useEffect } from "react";
 import { AuthContext } from "../model/providers/authprovider";
-import UserModel from "../model/providers/UserModel";
+import UserModel from "../model/Usermodel";
 import jwtDecode from "jwt-decode";
 
 //view
